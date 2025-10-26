@@ -193,32 +193,32 @@ const tour = new WelcomeTour(tourSteps, {
 
 ### Automated Testing
 
-Use the test file at `/tmp/test-tour.html`:
+A test HTML file can be created for manual browser testing. Create a file at `/tests/tour-test.html`:
 
-```bash
-# Open in browser
-open /tmp/test-tour.html
-
-# Or navigate to it in your web browser
+```html
+<!DOCTYPE html>
+<!-- See tour test implementation in repository tests directory -->
 ```
+
+Or test directly on the dashboard page after setup.
 
 ### API Testing
 
-Test the API endpoint:
+Test the API endpoint (replace `YOUR_DOMAIN` with your actual domain):
 
 ```bash
 # Get tour status
-curl -X GET http://localhost/api/tour-progress.php \
+curl -X GET https://YOUR_DOMAIN/api/tour-progress.php \
   -H "Cookie: PHPSESSID=your_session_id"
 
 # Update progress
-curl -X POST http://localhost/api/tour-progress.php \
+curl -X POST https://YOUR_DOMAIN/api/tour-progress.php \
   -H "Content-Type: application/json" \
   -H "Cookie: PHPSESSID=your_session_id" \
   -d '{"current_step": 2}'
 
 # Reset tour
-curl -X POST http://localhost/api/tour-progress.php \
+curl -X POST https://YOUR_DOMAIN/api/tour-progress.php \
   -H "Content-Type: application/json" \
   -H "Cookie: PHPSESSID=your_session_id" \
   -d '{"reset": true}'
@@ -385,6 +385,6 @@ For questions or issues:
 
 ---
 
-**Version**: 1.0  
-**Last Updated**: October 2024  
+**Version**: 1.0.0  
+**Last Updated**: October 26, 2024  
 **Maintainer**: OUTSINC Development Team
