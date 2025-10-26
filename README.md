@@ -7,6 +7,8 @@ A trauma-informed, multi-role web application designed for clients, outreach wor
 ### Core Framework
 - **Authentication & Access Control** - Secure login, registration, logout, and password reset (CSRF protected, passwords hashed)
 - **Role-Based System** - Clients activate instantly; Workers and Service Providers require admin approval
+- **Welcome Tour System** - Interactive guided tour for new users with role-specific feature highlights
+- **Comprehensive Help & Documentation** - Built-in manual with role-based access and searchable content
 - **Shared Components** - Modular header, footer, and navbar with dynamic navigation, theme toggles, and live status icons
 - **Responsive UI/UX** - Fully mobile-responsive with transitions, animations, and sound feedback
 - **Session Management** - Encrypted PHP sessions, automatic regeneration, and full audit logging
@@ -181,6 +183,27 @@ Built-in accessibility features:
 ## 🧪 Fine-Tuning
 
 See `followupquestions.md` for 100 yes/no questions to help customize the platform based on your organization's specific needs.
+
+## 📚 Documentation
+
+### User Documentation
+- **MANUAL.md** - Comprehensive user manual with role-specific guides
+  - Getting Started
+  - Feature guides for all user roles (Client, Worker, Service Provider, Admin)
+  - Step-by-step workflows
+  - Troubleshooting and FAQ
+  - Table of contents and searchable index
+
+### Developer Documentation
+- **TOUR_DEVELOPER_GUIDE.md** - Guide for customizing the welcome tour system
+- **screenshots/** - Directory for user manual screenshots with guidelines
+
+### Built-in Help System
+The platform includes a built-in help section accessible from the user menu:
+- Role-based documentation access (users see only relevant content)
+- Administrators can view guides for all roles
+- Searchable documentation viewer
+- Quick links to common topics
 
 ## 📊 Tech Stack
 
