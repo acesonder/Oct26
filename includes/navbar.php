@@ -133,6 +133,9 @@ $currentRole = getCurrentUserRole();
                         <li><a href="/modules/client/settings.php">
                             <span class="icon">⚙️</span> Settings
                         </a></li>
+                        <li><a href="/modules/common/help.php">
+                            <span class="icon">📚</span> Help & Documentation
+                        </a></li>
                         <li><a href="/modules/client/accessibility.php">
                             <span class="icon">♿</span> Accessibility
                         </a></li>

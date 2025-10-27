@@ -522,6 +522,20 @@ INSERT INTO milestones (milestone_name, description, category, points) VALUES
 ('First Check-in', 'Completed first mood check-in', 'wellness', 10),
 ('Month Active', 'Active for 30 days', 'engagement', 100);
 
+-- User Tour Progress
+CREATE TABLE IF NOT EXISTS user_tour_progress (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    tour_completed BOOLEAN DEFAULT FALSE,
+    tour_skipped BOOLEAN DEFAULT FALSE,
+    current_step INT DEFAULT 0,
+    completed_at TIMESTAMP NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+    UNIQUE KEY unique_user_tour (user_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
 -- Create indexes for performance
 CREATE INDEX idx_users_role_status ON users(role, status);
 CREATE INDEX idx_messages_conversation ON messages(conversation_id, created_at);
